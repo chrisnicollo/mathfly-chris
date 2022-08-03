@@ -287,8 +287,8 @@ call mode:
     insert("\mathcal ")
 calligraphic <user.letter>:
     insert('\mathcal ')
-    insert(user.formatted_text(letter, "all cap"))
     # user.keys_uppercase_letters(letter)
+    insert(user.formatted_text(letter, "all cap"))
     edit.right()
 
 
