@@ -1,5 +1,7 @@
-
 app: lyx
+app: LyX.exe
+app: LyX2.3.exe
+app: LyX for Windows
 -
 push dot:
     key(end)

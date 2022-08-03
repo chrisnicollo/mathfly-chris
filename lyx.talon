@@ -1,4 +1,7 @@
 app: lyx 
+app: LyX.exe
+app: LyX2.3.exe
+app: LyX for Windows
 -
 #Play around with delays to make them as low as possible, mostly needed for filling matrices
 settings():
@@ -27,14 +30,16 @@ cases: "\cases "
 operator <user.letters>:
     insert("\\text ")
     sleep(10ms)
-    user.insert_formatted(letters, "alldown")
+    # user.insert_formatted(letters, "alldown")
+    user.insert_formatted(letters, "all down")
     edit.right()
 #enable sentence formatter in formatters.py dictionary for this to work
 #A sequence of letters that needs to be formatted normally with the first letter capital, e.g. Log
 capital operator <user.letters>:
     insert('\\text ')
     sleep(10ms)
-    user.insert_formatted(letters, "sentence")
+    # user.insert_formatted(letters, "sentence")
+    user.insert_formatted(letters, "all cap")
 
 #matrices are surrounded by square brackets
 #some edge cases
@@ -184,7 +189,7 @@ view PDF: key(ctrl-r)
 update PDF: key(ctrl-shift-r)
 next tab: key(ctrl-pgdown)
 (prior | previous) tab: key(ctrl-pgup)
-close tab: key(ctrl-w)
+# close tab: key(ctrl-w)
 move line up: key(alt-up)
 move line down: key(alt-down)
 #formatting
@@ -282,7 +287,8 @@ call mode:
     insert("\mathcal ")
 calligraphic <user.letter>:
     insert('\mathcal ')
-    user.keys_uppercase_letters(letter)
+    insert(user.formatted_text(letter, "all cap"))
+    # user.keys_uppercase_letters(letter)
     edit.right()
 
 

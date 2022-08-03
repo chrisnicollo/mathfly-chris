@@ -1,4 +1,7 @@
 app: lyx
+app: LyX.exe
+app: LyX2.3.exe
+app: LyX for Windows
 -
 #commands and symbols for matrix operations
 transpose:
@@ -41,7 +44,8 @@ row <number>:
 determine <user.letter>:
     insert('\det ')
     key(alt-m ( )
-    user.keys_uppercase_letters(letter)
+    # user.keys_uppercase_letters(letter)
+    insert(user.formatted_text(letter, "all cap"))
     edit.right()
     
 determine:
