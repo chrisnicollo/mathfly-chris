@@ -340,7 +340,7 @@ push semi:
     key(enter)
 semi:
     insert(";")
-set compliment:
+set complement:
     insert("^c ")
 
 multivariable limit:
@@ -363,3 +363,6 @@ correlation:
     edit.right()
     key(alt-m ()
 
+text [<user.formatters>] [<user.text>]:
+    text = user.formatted_text(text or "", formatters or "all down")
+    insert("\\text {text}")

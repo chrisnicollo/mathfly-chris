@@ -1,5 +1,6 @@
 title: /\.tex/
 -
+# FIXME: Need to add capture rules for some if ever going to use these
 document class <user.tex_document_classes>:
     insert("\\documentclass{{{tex_document_classes}}}")
 use package <user.tex_packages>:

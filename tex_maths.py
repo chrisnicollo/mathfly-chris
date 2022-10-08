@@ -129,7 +129,7 @@ symbols = {
     "equivalent": "leftrightarrow",
     "medium space": ":",
     "proper subset": "subset",
-    "stop": "cdot",
+    # "stop": "cdot", # talon was getting this confused with slap
     # "member": "in",
     "normal tech": "textrm",
     "long equivalent": "longleftrightarrow",
